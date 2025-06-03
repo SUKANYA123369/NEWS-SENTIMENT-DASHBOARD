@@ -23,7 +23,7 @@
 2. **Sentiment Analysis & Dashboard**
    - A Streamlit app connects to the RDS database to read news data.
    - Sentiment analysis is applied to the `title` column using TextBlob.
-   - A new `sentiment` column is added to the table with values: **positive**, **negative**, or **neutral**.
+   - A new `sentimental` column is added to the table with values: **positive**, **negative**, or **neutral**.
    - Each row is color-coded based on sentiment:
      - Positive: Blue
      - Negative: Red
