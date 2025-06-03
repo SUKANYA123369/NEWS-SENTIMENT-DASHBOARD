@@ -77,4 +77,16 @@ The Docker setup files are included in the repo:
 
 ![Project Architecture](./streamlit.jpeg)
 
+## 🖼️ Output Preview
+
+You can view the output screenshot here [streamlit_dashboard.png](./streamlit_dashboard.png)
+
+## ✅ Conclusion
+
+The **News Sentiment Dashboard** project demonstrates a complete end-to-end data pipeline using AWS services. It fetches real-time news articles from the News API, stores them in both S3 and RDS, performs sentiment analysis using TextBlob, and visualizes the results through a Streamlit dashboard. The entire solution is containerized with Docker, deployed using Amazon ECR and ECS, and made accessible via a public IP.
+
+This project showcases how cloud-native tools, data engineering, natural language processing, and interactive dashboards can be integrated into a scalable and automated solution.
+
+
+
 
