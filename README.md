@@ -1,6 +1,19 @@
 # 📰 News Sentiment Dashboard
 ## Overview
-**News Sentiment Dashboard** is a project that collects news articles from the News API, stores them in AWS S3 and RDS, performs sentiment analysis on the article titles, and visualizes the results using a Streamlit dashboard. The entire application is containerized using Docker and deployed on AWS ECS.
+**News Sentiment Dashboard** is a project that collects news articles from the News API, stores them in AWS S3 and RDS, performs sentiment analysis on the article titles, and visualizes the results using a Streamlit dashboard. The entire application is containerized using Docker.The Dockerized Streamlit dashboard is pushed to **Amazon ECR (Elastic Container Registry)** as a container image. This image is then deployed and run on **Amazon ECS (Elastic Container Service)**. The application is accessible publicly via the ECS task's **public IP** on port **8501**(You can choose and expose any port)
+
+## 💻 Technologies Used
+
+- AWS Lambda  
+- Amazon S3  
+- Amazon RDS (PostgreSQL)  
+- Streamlit  
+- TextBlob  
+- Docker  
+- Amazon ECR  
+- Amazon ECS  
+- News API
+  
 ## 🔁 Workflow
 1. **Data Ingestion with AWS Lambda**
    - A Lambda function fetches news articles from the News API.
@@ -20,19 +33,8 @@
    - The Streamlit app is containerized using Docker.
    - The Docker image is pushed to Amazon ECR.
    - The image is then pulled and run on Amazon ECS.
-   - The dashboard is accessible via the public IP and port `8051` of the ECS task (http://<'public-ip'>:8051)
+   - The dashboard is accessible via the public IP and port `8051` of the ECS task (http://<'public-ip'>:8501)
 
-## 💻 Technologies Used
-
-- AWS Lambda  
-- Amazon S3  
-- Amazon RDS (PostgreSQL)  
-- Streamlit  
-- TextBlob  
-- Docker  
-- Amazon ECR  
-- Amazon ECS  
-- News API
 
 ## 🎨 Sentiment Visualization
 
@@ -64,8 +66,15 @@ The Streamlit app is located in [`app.py`](./app.py). It performs the following 
   - Green for **neutral**
 - Displays an interactive dashboard visualizing news and their sentiments
 
-## 🐳 Docker Setup
+## 🐳 Docker Configuration
 
-- `Dockerfile`: Defines the container image for the Streamlit app.  
-- `requirements.txt`: Lists all Python dependencies for the app.
+The Docker setup files are included in the repo:
+
+- [`Dockerfile`](./Dockerfile) — defines the container image for the Streamlit app  
+- [`requirements.txt`](./requirements.txt) — specifies the Python dependencies
+
+## 🏗️ Project Architecture
+
+![Project Architecture](./streamlit.jpeg)
+
 
