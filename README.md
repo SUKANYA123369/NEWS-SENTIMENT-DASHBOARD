@@ -70,7 +70,7 @@ The Streamlit app is located in [`app.py`](./app.py). It performs the following 
 
 The Docker setup files are included in the repo:
 
-- [`Dockerfile`](./Dockerfile) — defines the container image for the Streamlit app  
+- [`Dockerfile`](./dockerfile) — defines the container image for the Streamlit app  
 - [`requirements.txt`](./requirements.txt) — specifies the Python dependencies
 
 ## 🏗️ Project Architecture
