@@ -20,6 +20,7 @@
    - The raw data is stored in S3.
    - The same data is also inserted into a PostgreSQL table in Amazon RDS.
    - The RDS table is created programmatically within the Lambda function if it doesn't already exist.
+   - The Lambda function is triggered every five minutes.
 2. **Sentiment Analysis & Dashboard**
    - A Streamlit app connects to the RDS database to read news data.
    - Sentiment analysis is applied to the `title` column using TextBlob.
